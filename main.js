@@ -307,5 +307,5 @@ function allInDictionary(words) {
 
 // returns true if word is in the dictionary and false otherwise
 function inDictionary(word) {
-    return true;
+    return dictionary.has(word.toLowerCase());
 }
