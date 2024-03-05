@@ -1,0 +1,139 @@
+body {
+	margin-top: 50px;
+	background-color: white;
+}
+
+.tile {
+	width: 52px;
+	height: 52px;
+	margin: 2.5px;
+	border: solid;
+	border-color: #d3d6da;
+	border-width: 2px;
+
+	font-family: "Helvetica Neue";
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.key {
+	height: 58px;
+	width: 2.75rem;
+	margin: 0 6px 0 0;
+	padding: 0.25em;
+	border: none;
+	border-radius: 4px;
+
+	font-family: "Helvetica Neue";
+    font-weight: bold;
+    font-size: 1.25em;
+
+	background-color: #d4d6da;
+	color: black;
+}
+
+.keyboard {
+	margin: 7px;
+	
+	.row {
+		margin: 0 auto 8px;
+	}
+
+	.spacer {
+		width: 1.25rem;
+	}
+
+	#key-Enter {
+		font-size: 12px;
+		width: 4rem;
+	}
+
+	#key-Backspace {
+		font-size: 12px;
+		width: 4rem;
+	}
+}
+
+.row {
+	display: flex;
+  	justify-content: center;
+}
+
+.title {
+	text-align: center;
+	font-family: "nyt-karnakcondensed";
+	font-size: 20px;
+    font-weight: 700;
+}
+
+/* Tile and keyboard colors */
+
+.inputted {
+	border-color: #878a8c;
+}
+
+.green {
+	background-color: #6aaa64;
+	border-color: #6aaa64;
+	color: white;
+}
+
+.yellow {
+	background-color: #c9b558;
+	border-color: #c9b558;
+	color: white;
+}
+
+.gray {
+	background-color: #787c7e;
+	border-color: #787c7e;
+	color: white;
+}
+
+.space { /* "blank" tile for multi-word secret messages */
+	background-color: white;
+	border-color: white;
+}
+
+/* Annimations */
+
+.flip {
+	animation: flip 500ms ease;
+}
+
+.jump {
+	animation: jump 500ms ease;
+}
+
+.shake {
+	animation: shake 500ms ease;
+}
+
+@keyframes flip {
+	0% {transform: scaleY(1);}
+	50% {transform: scaleY(0);}
+  	100% {transform: scaleY(1);}
+}
+
+@keyframes jump {
+	0% {transform: translateY(0px);}
+	25% {transform: translateY(-30px);}
+	50% {transform: translateY(5px);}
+	75% {transform: translateY(-15px);}
+	100% {transform: translateY(0px);}
+}
+
+@keyframes shake {
+	0% {transform: translateX(0px);}
+	12% {transform: translateX(-2px);}
+	24% {transform: translateX(4px);}
+	36% {transform: translateX(-4px);}
+	48% {transform: translateX(4px);}
+	60% {transform: translateX(-4px);}
+	72% {transform: translateX(4px);}
+	84% {transform: translateX(-2px);}
+	100% {transform: translateX(0px);}
+}
