@@ -1,4 +1,4 @@
-const secretMessage = "arjun".toUpperCase();
+const secretMessage = "bitch".toUpperCase();
 const NUMBER_OF_GUESSES = 6;
 
 const secretWord = secretMessage.replaceAll(" ", ""); // the secret message without spaces
