@@ -145,11 +145,9 @@ function balloons() {
         }
         title.innerHTML = "<h1>BIRTHDAY</h1>";
 
-        for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
+        for (let i = correctRow + 1; i < NUMBER_OF_GUESSES; i++) {
             for (let j = 0; j < NUMBER_OF_TILES; j++) {
-                if (i !== correctRow) {
-                    getTileElement(i, j).classList.add("lavender-border");
-                }
+                getTileElement(i, j).classList.add("lavender-border");
             }
         }
 
