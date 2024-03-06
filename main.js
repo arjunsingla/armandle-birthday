@@ -129,6 +129,41 @@ function correctAnnimation() {
     }.bind(this, currentRow), `${NUMBER_OF_TILES * FLIP_ANNIMATION_DELAY}`); // wait after flips are done before jumping!
 }
 
+function balloons() {
+    let balloons = new Array();
+
+    for (let i = 0; i < 8; i++) {
+        let b = document.createElement("div");
+        b.classList.add("balloon");
+        balloons.push(b);
+    }
+    let title = document.querySelector(".title");
+
+    setTimeout(function(correctRow) {
+        for (let i = 0; i < balloons.length; i++) {
+            title.after(balloons[i]);
+        }
+        title.innerHTML = "<h1>BIRTHDAY</h1>";
+
+        for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
+            for (let j = 0; j < NUMBER_OF_TILES; j++) {
+                if (i !== correctRow) {
+                    getTileElement(i, j).classList.add("lavender-border");
+                }
+            }
+        }
+
+        document.querySelector("body").classList.add("lavender");
+    }.bind(this, currentRow), `${(NUMBER_OF_TILES * (FLIP_ANNIMATION_DELAY + JUMP_ANNIMATION_DELAY))}`);
+
+     setTimeout(function() {
+        for (let i = 0; i < balloons.length; i++) {
+            balloons[i].remove();
+        }
+    }, `${(NUMBER_OF_TILES * (FLIP_ANNIMATION_DELAY + JUMP_ANNIMATION_DELAY)) + 2000}`);
+
+}
+
 function changeKeyboardColors(guessedWord) {
     setTimeout(function() {
         for (let i = 0; i < guessedWord.length; i++) {
@@ -187,6 +222,7 @@ function handleEnter() {
     if (guessedWord === secretWord) {
         gameOver = true; // you guessed the word!
         correctAnnimation();
+        balloons();
         return;
     }
 
