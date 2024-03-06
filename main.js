@@ -120,13 +120,13 @@ function guessAnnimation(colors) {
 }
 
 function correctAnnimation() {
-    setTimeout(function(correctRow) {
+    setTimeout(function() {
         for (let i = 0; i < NUMBER_OF_TILES; i++) {
-            let tile = getTileElement(correctRow, i);
+            let tile = getTileElement(currentRow, i);
             tile.classList.add("jump");
             tile.style.animationDelay = `${i * JUMP_ANNIMATION_DELAY}ms`;
         }
-    }.bind(this, currentRow), `${NUMBER_OF_TILES * FLIP_ANNIMATION_DELAY}`); // wait after flips are done before jumping!
+    }, `${NUMBER_OF_TILES * FLIP_ANNIMATION_DELAY}`); // wait after flips are done before jumping!
 }
 
 function balloons() {
