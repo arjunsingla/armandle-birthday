@@ -129,7 +129,7 @@ function correctAnnimation() {
     }, `${NUMBER_OF_TILES * FLIP_ANNIMATION_DELAY}`); // wait after flips are done before jumping!
 }
 
-function balloons() {
+function birthdayExtras() {
     let balloons = new Array();
 
     for (let i = 0; i < 8; i++) {
@@ -152,6 +152,8 @@ function balloons() {
         }
 
         document.querySelector("body").classList.add("lavender");
+        let audio = new Audio('birthdaybitch.mp3');
+        audio.play();
     }.bind(this, currentRow), `${(NUMBER_OF_TILES * (FLIP_ANNIMATION_DELAY + JUMP_ANNIMATION_DELAY))}`);
 
      setTimeout(function() {
@@ -220,7 +222,7 @@ function handleEnter() {
     if (guessedWord === secretWord) {
         gameOver = true; // you guessed the word!
         correctAnnimation();
-        balloons();
+        birthdayExtras();
         return;
     }
 

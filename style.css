@@ -1,13 +1,15 @@
 html {
 	touch-action: pan-y;
-
 }
 
 body {
 	margin-top: 50px;
 	background-color: white;
-
 	touch-action: pan-y;
+}
+
+img {
+	width: 100%;
 }
 
 .tile {
