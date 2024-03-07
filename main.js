@@ -112,7 +112,7 @@ function setUpNavbar() {
 
     let center = document.querySelector(".navbar-center");
     let logo = document.createElement("img");
-    logo.src = "logo.png";
+    logo.src = "https://cdn.jsdelivr.net/gh/arjunsingla/arjunsingla.github.io@main/logo.png";
     center.appendChild(logo);
 
     let right = document.querySelector(".navbar-right");
@@ -202,7 +202,7 @@ function birthdayExtras() {
         navbar.innerHTML = "<h1>BIRTHDAY</h1>";
 
         // play the song!
-        let audio = new Audio('birthdaybitch.mp3');
+        let audio = new Audio('https://cdn.jsdelivr.net/gh/arjunsingla/arjunsingla.github.io@main/birthdaybitch.mp3');
         audio.play();
 
     }.bind(this, currentRow), `${(NUMBER_OF_TILES * (FLIP_ANNIMATION_DELAY + JUMP_ANNIMATION_DELAY))}`);
