@@ -1,9 +1,92 @@
+.navbar {
+	margin-top: 20px;
+	margin-bottom: 40px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-left {
+	width: 33%;
+	display: flex;
+	justify-content: left;
+}
+
+.navbar-center {
+	width: 33%;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar-right {
+	display: flex;
+	justify-content: right;
+	width: 33%;
+}
+
+.navbar img {
+	height: 50px;
+	width: 100px;
+}
+
+.navbar h1 {
+	margin: 0px;
+	font-size: 50px;
+}
+
+.navbar svg {
+	margin-left: 10px;
+}
+
+.subscribe {
+	min-height: 29px;
+	margin-left: 10px;
+	padding: 0 16px;
+
+	border-radius: 25px;
+	border-color: black;
+	background-color: white;
+
+	font-size: 12px;
+	font-weight: bold;
+	font-family: "Franklin Gothic Medium", "Franklin Gothic", sans-serif;
+}
+
+@media (max-width: 830px) {
+	.navbar-left {
+		width: 0%;
+	}
+
+	.navbar-center {
+		padding-left: 20px;
+		justify-content: left;
+		width: 30%;
+	}
+
+	.navbar-right {
+		justify-content: right;
+		width: 70%;
+	}
+
+	.navbar img {
+		height: 40px;
+	}
+
+	.navbar h1 {
+		height: 40px;
+	}
+
+	.subscribe {
+		font-size: 10px;
+	}
+}
+
 html {
 	touch-action: pan-y;
 }
 
 body {
-	margin-top: 50px;
 	background-color: white;
 	touch-action: pan-y;
 }
@@ -71,13 +154,6 @@ img {
   	justify-content: center;
 }
 
-.title {
-	text-align: center;
-	font-family: "nyt-karnakcondensed";
-	font-size: 20px;
-    font-weight: 700;
-}
-
 /* Tile and keyboard colors */
 
 .inputted {
@@ -105,6 +181,14 @@ img {
 .space { /* "blank" tile for multi-word secret messages */
 	background-color: white;
 	border-color: white;
+}
+
+.lavender {
+    background-color: #DFC5FE;
+}
+
+.lavender-border {
+    border-color: #d0aafd;
 }
 
 /* Annimations */
