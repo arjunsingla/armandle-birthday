@@ -130,6 +130,7 @@ img {
 
 .keyboard {
 	margin: 7px;
+	margin-bottom: 75px;
 	
 	.row {
 		margin: 0 auto 8px;
